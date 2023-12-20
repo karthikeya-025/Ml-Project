@@ -42,5 +42,5 @@ def evaluate(X_train, y_train, X_test, y_test, models, param):
             report[list(models.keys())[i]] = test_score
         return report
 
-    except print(0):
-        pass
+    except Exception as e:
+        raise CustomException(e)
